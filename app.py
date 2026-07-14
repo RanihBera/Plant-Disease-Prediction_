@@ -3,6 +3,8 @@ import tensorflow as tf
 import numpy as np
 from PIL import Image
 from disease_info import disease_info
+import gdown
+import os
 
 # ---------------- PAGE CONFIG ----------------
 st.set_page_config(
@@ -52,9 +54,18 @@ st.title("🌿 Plant Disease Prediction System")
 st.write("Upload a plant leaf image and click **Predict Disease**.")
 
 # ---------------- LOAD MODEL ----------------
+MODEL_PATH = "plant_disease_model.h5"
+FILE_ID = "1EMizC4GFfIT8PWoSriNLWkpvfJQJg-xq"
+
 @st.cache_resource
 def load_model():
-    return tf.keras.models.load_model("plant_disease_model.h5")
+
+    if not os.path.exists(MODEL_PATH):
+        with st.spinner("Downloading AI model... Please wait."):
+            url = f"https://drive.google.com/uc?id={FILE_ID}"
+            gdown.download(url, MODEL_PATH, quiet=False)
+
+    return tf.keras.models.load_model(MODEL_PATH)
 
 model = load_model()
 
