@@ -63,11 +63,7 @@ def load_model():
     if not os.path.exists(MODEL_PATH):
         with st.spinner("Downloading AI model... Please wait."):
             url = f"https://drive.google.com/uc?id={FILE_ID}"
-gdown.download(
-    url,
-    MODEL_PATH,
-    quiet=False
-)
+            gdown.download(url, MODEL_PATH, quiet=False)
 
     try:
         return tf.keras.models.load_model(MODEL_PATH)
