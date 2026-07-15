@@ -62,18 +62,18 @@ def load_model():
 
     if not os.path.exists(MODEL_PATH):
         with st.spinner("Downloading AI model... Please wait."):
-           gdown.download(
-    id=FILE_ID,
-    output=MODEL_PATH,
-    quiet=False,
-    fuzzy=True
-)
+            gdown.download(
+                id=FILE_ID,
+                output=MODEL_PATH,
+                quiet=False,
+                fuzzy=True
+            )
 
     try:
-    return tf.keras.models.load_model(MODEL_PATH)
-except Exception as e:
-    st.error(f"Model loading failed: {e}")
-    raise
+        return tf.keras.models.load_model(MODEL_PATH)
+    except Exception as e:
+        st.error(f"Model loading failed: {e}")
+        raise
 model = load_model()
 
 st.success("✅ Model Loaded Successfully")
