@@ -151,10 +151,51 @@ if uploaded_file is not None:
             st.markdown("## 🛡 Prevention")
             for item in info["Prevention"]:
                 st.write("•", item)
-
             st.markdown("## 💊 Treatment")
             for item in info["Treatment"]:
                 st.write("•", item)
 
+            st.markdown("## 🌱 Plant Care Recommendations")
+
+            if "Water" in info:
+                st.write("💧 Water:", info["Water"])
+
+            if "Moisture" in info:
+                st.write("💦 Soil Moisture:", info["Moisture"])
+
+            if "Sunlight" in info:
+                st.write("☀️ Sunlight:", info["Sunlight"])
+
+            if "Soil" in info:
+                st.write("🌱 Soil:", info["Soil"])
+
+            if "Temperature" in info:
+                st.write("🌡️ Temperature:", info["Temperature"])
+
+            if "Humidity" in info:
+                st.write("💨 Humidity:", info["Humidity"])
+
+            if "Pesticide" in info:
+                st.write("🧪 Recommended Pesticide:", info["Pesticide"])
+
+            if "Pesticide Ratio" in info:
+                st.write("⚖️ Pesticide Ratio:", info["Pesticide Ratio"])
+
+            if "Composition" in info:
+                st.write("🧬 Composition:", info["Composition"])
+
+            if "Spray Interval" in info:
+                st.write("📅 Spray Interval:", info["Spray Interval"])
+
+            if "Fertilizer" in info:
+                st.write("🌾 Fertilizer:", info["Fertilizer"])
+
+            if "Severity" in info:
+                st.write("⚠️ Disease Severity:", info["Severity"])
+
+            if "Recovery Time" in info:
+                st.write("⏳ Recovery Time:", info["Recovery Time"])
+
         else:
             st.warning("Disease information not available.")
+        

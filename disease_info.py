@@ -108,22 +108,51 @@ disease_info = {
     },
 
     "Tomato Early Blight": {
-        "Symptoms": [
-            "Brown circular spots with concentric rings",
-            "Yellowing around spots",
-            "Older leaves dry and fall"
-        ],
-        "Cause": "Caused by Alternaria solani fungus.",
-        "Prevention": [
-            "Rotate crops",
-            "Avoid excess moisture",
-            "Maintain proper spacing"
-        ],
-        "Treatment": [
-            "Apply fungicide",
-            "Remove infected leaves"
-        ]
-    },
+    "Symptoms": [
+        "Brown circular spots with concentric rings",
+        "Yellowing around spots",
+        "Older leaves dry and fall"
+    ],
+
+    "Cause": "Caused by Alternaria solani fungus.",
+
+    "Prevention": [
+        "Rotate crops",
+        "Avoid excess moisture",
+        "Maintain proper spacing"
+    ],
+
+    "Treatment": [
+        "Apply Mancozeb fungicide",
+        "Remove infected leaves"
+    ],
+
+    "Water": "2–3 liters per plant every 2–3 days",
+
+    "Moisture": "Maintain 60–70% soil moisture",
+
+    "Sunlight": "6–8 hours of direct sunlight daily",
+
+    "Soil": "Well-drained loamy soil (pH 6.0–6.8)",
+
+    "Temperature": "22–28°C",
+
+    "Humidity": "60–75%",
+
+    "Pesticide": "Mancozeb 75 WP",
+
+    "Pesticide Ratio": "2 g per 1 liter of water",
+
+    "Composition": "Mancozeb 75%",
+
+    "Spray Interval": "Spray every 7–10 days",
+
+    "Fertilizer": "NPK 19:19:19",
+
+    "Severity": "🟡 Medium",
+
+    "Recovery Time": "10–15 days"
+},
 
     "Tomato Late Blight": {
         "Symptoms": [
